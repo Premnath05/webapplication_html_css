@@ -1,0 +1,99 @@
+<!Doctype html>
+<head>
+    <body>
+        <form action="animeworld.html">
+        <h1>Employee Registeration</h1>
+        <br>
+       
+        <fieldset>
+            <legend> <b>Personal Information</b></legend>
+            <label>First Name<i style="color: red;">*</i></label>
+            <br>
+            <input type="text" placeholder="Enter the first name" required>
+            <br>
+            <label>Last Name<i style="color: red;">*</i></label>
+            <br>
+            <input type="text" placeholder="Enter the last name"required>
+            <br><label>Email<i style="color: red;">*</i></label>
+            <br>
+            <input type="text" placeholder="Enter the email"required>
+           <br> <small>Example:john@gmail.com</small>
+            <br><label>Phone Number<i style="color: red;">*</i></label><br>
+            <input type="tel" pattern="[0-9]+" title="Enter valid phone number" placeholder="Enter the phone number"required>
+            <br><label>Gender<i style="color: red;">*</i></label><br>
+            <input type="radio" name="Gender" value="Male"required>Male </input>
+            <input type="radio" name="Gender" value="Female"required>Female </input>
+            <input type="radio" name="Gender" value="Others"required>Others </input>
+           <br> <lable>Date of Birth<i style="color: red;">*</i></lable><br>
+            <input type="date"required>
+            <br><label>Marital Status<i style="color: red;">*</i></label><br>
+            <input type="radio" name="Marital-Status" value="Single"required>Single </input>
+            <input type="radio" name="Marital-Status"value="Married"required>Married </input>
+            <br>
+            <label>Spouse Name(if applicable)</label><br>
+            <input type="text" placeholder="Enter spouse Name"required></input>
+        </fieldset>
+            
+            <fieldset>
+                <legend>Employement Details</legend>
+                <lable>Department<i style="color: red;">*</i></lable><br>
+                <select id="Department" required>
+                    <option value="">Select Department</option>
+                <option value="HR">Hr</option></select>
+
+               <br> <label>Year of Experience</label>
+                <br>
+                <input type="text" placeholder="Enter experience in year">
+              <br>  <lable>Skills:</lable><br>
+                <input type="checkbox" >HTML </input>
+                <input type="checkbox">CSS</input>
+                <input type="checkbox">JavaScript</input>
+                <input type="checkbox">SQL</input>
+
+               <br> <lable>Certifications</lable><br>
+               <textarea placeholder="List your
+               Certifications"></textarea>
+
+              <br> <lable>Profile Picture</lable><br>
+               <input type="file" accept=".png,.jpg"><br>
+               <small style="opacity:0.4;">Allowed formats JPG,PNG</small>
+
+
+            </fieldset>
+<fieldset>
+    <legend>Emergency Contact</legend>
+    
+    <label>Contact Name<i style="color: red;">*</i></label><br>
+    
+    <input type="text" placeholder="Enter contact name"required>
+
+    <br>
+    <lable>Contact Phone<i style="color: red;">*</i></lable>
+    <br><input type="tel" pattern="[0-9]+" placeholder="Enter contact phone"required>
+
+    <br><lable>Relationship<i style="color: red;">*</i></lable><br>
+    <input type="text" placeholder="Enter relationship(eg.Pair)"required>
+    <br>
+
+</fieldset>
+<fieldset>
+    <legend>Address Details</legend>
+    <lable>Address<i style="color: red;">*</i></lable><br>
+    <textarea placeholder="Enter your address"required></textarea>
+</fieldset>
+<fieldset>
+    <legend>Login Details</legend>
+    <label>Username<i style="color: red;">*</i></label><br>
+    <input type="text" placeholder="Choose a username"required>
+    <br><label>Password<i style="color: red;">*</i></label><br>
+    <input type="text" placeholder="Enter Password"required>
+    <br><label>Confirm Password<i style="color: red;">*</i></label><br>
+    <input type="text" placeholder="Re-enter the password"required>
+</fieldset>
+<button type="submit">Register</button>
+<button type="reset">clear From</button>
+            
+
+</form>
+    </body>
+</head>
