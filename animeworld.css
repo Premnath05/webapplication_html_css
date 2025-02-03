@@ -1,0 +1,73 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav {
+    background-color: chocolate;
+    padding: 10px;
+    /*display: flex; flex-direction: row;*/
+    
+    font-weight: 500;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+}
+.sidebar {
+    width: 100px;
+    position: fixed;
+    left: 0;
+    top: 50px;
+    display: block;
+
+    display: flex ;flex-direction:column;
+}
+nav a{
+    color:white;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 10px;
+
+}
+nav  ul{
+
+    list-style-type: none;
+    display: flex;
+    gap: 100px;
+}
+nav a:hover {
+    color: black;
+    
+}
+body{
+    background-color: #EEE4E1;
+}
+
+h1 {
+    color:coral;
+    text-align: center;
+
+}
+.prem{
+    
+    color: black;
+
+}
+div p{
+    color: red;
+}
+
+#madhav {
+    color: black;
+   
+
+}
+
+p::first-letter{
+    font-size: large;
+    color: blue;
+}
+.center{
+
+    text-align: center;
+}

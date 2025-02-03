@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Page Layout */
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header */
+        header {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        /* Navigation */
+        nav {
+            background: #444;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main Layout */
+        .container {
+            display: flex;
+            flex: 1;
+        }
+
+        /* Sidebar */
+        aside {
+            width: 250px;
+            background: #f4f4f4;
+            padding: 20px;
+        }
+
+        /* Main Content */
+        main {
+            flex: 1;
+            padding: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>My Website</h1>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <!-- Main Content Area -->
+    <div class="container">
+        
+        <!-- Sidebar -->
+        <aside>
+            <h2>Sidebar</h2>
+            <p>Links and additional content go here.</p>
+        </aside>
+
+        <!-- Main Content -->
+        <main>
+            <h2>Welcome</h2>
+            <p>This is the main content area where you can add your website’s information.</p>
+        </main>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 My Website. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,6 +1,36 @@
 <!Doctype html>
+
+    
 <head>
+    <style>
+
+        body
+        {
+            display: flex;
+            justify-content: center;
+            margin: 100px;
+            
+        }
+     
+        .ab{
+            margin: 100px;
+            padding: 50px;
+            width: 800px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .ab{
+            width: 50px;
+            padding: 10px;
+        }
+    </style>
+        
+    
+    
+</head> 
+    
     <body>
+        <fieldset  style="background-color:bisque;">
         <form action="animeworld.html">
         <h1>Employee Registeration</h1>
         <br>
@@ -9,7 +39,7 @@
             <legend> <b>Personal Information</b></legend>
             <label>First Name<i style="color: red;">*</i></label>
             <br>
-            <input type="text" placeholder="Enter the first name" required>
+            <input  type="text" placeholder="Enter the first name"  required style="padding: 10px;" >
             <br>
             <label>Last Name<i style="color: red;">*</i></label>
             <br>
@@ -19,7 +49,8 @@
             <input type="text" placeholder="Enter the email"required>
            <br> <small>Example:john@gmail.com</small>
             <br><label>Phone Number<i style="color: red;">*</i></label><br>
-            <input type="tel" pattern="[0-9]+" title="Enter valid phone number" placeholder="Enter the phone number"required>
+            <input type="tel" pattern="[0-9]+" title="Ent
+            er valid phone number" placeholder="Enter the phone number"required>
             <br><label>Gender<i style="color: red;">*</i></label><br>
             <input type="radio" name="Gender" value="Male"required>Male </input>
             <input type="radio" name="Gender" value="Female"required>Female </input>
@@ -34,7 +65,7 @@
             <input type="text" placeholder="Enter spouse Name"required></input>
         </fieldset>
             
-            <fieldset>
+            <fieldset class="ab">
                 <legend>Employement Details</legend>
                 <lable>Department<i style="color: red;">*</i></lable><br>
                 <select id="Department" required>
@@ -60,7 +91,7 @@
 
 
             </fieldset>
-<fieldset>
+<fieldset class="ab">
     <legend>Emergency Contact</legend>
     
     <label>Contact Name<i style="color: red;">*</i></label><br>
@@ -76,12 +107,12 @@
     <br>
 
 </fieldset>
-<fieldset>
+<fieldset class="ab">
     <legend>Address Details</legend>
     <lable>Address<i style="color: red;">*</i></lable><br>
     <textarea placeholder="Enter your address"required></textarea>
 </fieldset>
-<fieldset>
+<fieldset class="ab">
     <legend>Login Details</legend>
     <label>Username<i style="color: red;">*</i></label><br>
     <input type="text" placeholder="Choose a username"required>
@@ -93,7 +124,6 @@
 <button type="submit">Register</button>
 <button type="reset">clear From</button>
             
-
 </form>
+</fieldset>
     </body>
-</head>
