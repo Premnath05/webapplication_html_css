@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+<link rel="stylesheet" href="login.css" type="text/css">
+</head>
+<body>
+  <div id="login">
+    <form action="animeworld.html" method="get" onsubmit="return validateform">
+      <fieldset>
+        <legend>Login</legend>
+        
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br>
+
+       <br> <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+       <br><br> <label for="phone">Enter Phone number:</label>
+        <input type="tel" id="yes" name="phone" required>
+        <span id="bd" style="color: chocolate;font-size: small;"></span>
+
+
+
+
+        <input type="submit" value="Login">
+
+        <a href="#" class="forgot-password">Forgot Password?</a>
+      </fieldset>
+    </form>
+  </div>
+
+  <script>
+     document.getElementById("yes").onchange=function(){
+                var pattern=/^\+91\d{10}$/;
+                const input=this.value;
+                const message=document.getElementById("bd");
+
+                if(pattern.test(input)){
+                    message.style.color="green";
+                    message.innerText="valid number";
+                }
+                else{
+                    message.innerText="enter the valid number";
+                }
+
+     }
+  </script>
+</body>
+</html>

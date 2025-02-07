@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="formsvalidate.css" type="text/css"> -->
+</head>
+<body>
+    <h1>Employee &nbsp; Registration</h1>
+    <form action="animeworld.html" onsubmit="return validateForm()">
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="firstName">Firstname<span>*</span>:&nbsp;</label>
+            <input type="text" name="firstName" id="firstName" placeholder="Enter First Name" required>
+            <p>
+                <label for="lastName">Lastname<span>*</span>:&nbsp;</label>
+                <input type="text" name="lastName" id="lastName" placeholder="Enter last Name" required>
+            </p>
+            <p>
+                <label for="email">Email<span>*</span>:&nbsp; </label>
+                <input type="text" name="email" id="email" placeholder="Enter Email" required>
+                <br>
+                <small style="opacity: 0.5;">Example:john123@gmail.com</small>
+                <span id="emailerror" style="color: red; display: none;">Enter the valid email id</span>
+            </p>
+            <p>
+                <label for="phone">Phone<span>*</span>:&nbsp;</label>
+                <input type="tel" name="phone" id="phone" placeholder="Enter Phone" required>   
+                <span id="phoneError" style="color: red; display: none;">Enter valid phone number</span>
+            </p>
+            <div>
+                <label for="gender">Select Gender<span>*</span>:&nbsp;</label>
+                <input type="radio" name="gender" id="Male" value="Male" >
+                <label for="Male">Male</label>
+                <input type="radio" name="gender" id="female" value="female">
+                <label for="female">Female</label>
+                <span id="genderError" style="color: red; display: none;">Please select a gender</span>
+            </div>
+            <div>
+                <p>
+                <label for="dob" >Date of Birth<span>*</span>:&nbsp;</label>
+                <input type="date" name="dob" id="dob"  placeholder="Enter Date of Birth" required>
+                </p>
+            </div>
+            <div>
+                <p>
+                    <label for="Status">Martial Status*:</label>
+                    <label for="Single">Single</label>
+                    <input type="radio" name="Status" id="Single" value="Single" required>
+                    <label for="Married">Married</label>
+                    <input type="radio" name="Status" id="Married" value="Married">
+                </p>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Employment Details</legend>
+            <label for="dept">Select your Department<span>*</span>:&nbsp;</label>
+            <input type="text" name="dept" id="dept" list="content-list" placeholder="Select Department" required>
+            <datalist id="content-list">
+                <option value="HR">HR</option>
+                <option value="IT">IT</option>
+                <option value="Finance">Finance</option>
+                <option value="Marketing">Marketing</option>
+            </datalist>
+            <span id="deptError" style="color: red; display: none;">Please select a department</span>
+            <p>
+                <label for="expierence">Years of Expierence<span>*</span>:&nbsp;</label>
+                <input type="number" name="expierence" id="expierence" placeholder="Enter Expierence" min="0">
+            </p>
+            <p>
+                <label for="Skills">Enter the Skills:</label>
+                <br>
+                <input type="checkbox" name="HTML" id="HTML" value="HTML">
+                <label for="HTML">HTML</label>
+                <input type="checkbox" name="CSS" id="CSS" value="CSS">
+                <label for="CSS">CSS</label>
+                <input type="checkbox" name="Javascript" id="Javascript" value="Javascript">
+                <label for="Javascript">Javascript</label>
+                <input type="checkbox" name="sql" id="sql" value="sql">
+                <label for="sql">SQL</label>
+            </p>
+            <p>
+                <label for="Certifications">Certifications</label>
+                <br>
+                <textarea name="Certifications" id="Certifications" cols="30" rows="10" placeholder="List the Certifications done"></textarea>
+            </p>
+            <div>
+                <p>
+                    <label for="file">Profile Picture</label>
+                    <input type="file" name="file" id="file" accept="image/*">
+                </p>
+            </div>
+        </fieldset>
+        <p>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Cancel">
+        </p>
+    </form>
+
+    <script>
+        function validateForm() {
+            let isValid = true;
+
+            let email = document.getElementById('email').value;
+            let emailPattern = /^[a-z0-9._-]+@[a-z0-9.-]+\.[a-z]{2,6}$/;
+            let emailError = document.getElementById('emailerror');
+            if (!emailPattern.test(email)) {
+                emailError.style.display = 'block';
+                isValid = false;
+            } else {
+                emailError.style.display = 'none';
+            }
+
+            let phone = document.getElementById('phone').value;
+            let phonePattern = /^(\+91)?[6-9]\d{9}$/;
+            let phoneError = document.getElementById('phoneError');
+            if (!phonePattern.test(phone)) {
+                phoneError.style.display = 'block';
+                isValid = false;
+            } else {
+                phoneError.style.display = 'none';
+            }
+
+            let male = document.getElementById('Male').checked;
+            let female = document.getElementById('female').checked;
+            let genderError = document.getElementById('genderError');
+            if (!male && !female) {
+                genderError.style.display = 'block';
+                isValid = false;
+            } else {
+                genderError.style.display = 'none';
+            }
+
+            let dept = document.getElementById('dept').value;
+            let deptError = document.getElementById('deptError');
+            if (dept === "") {
+                deptError.style.display = 'block';
+                isValid = false;
+            } else {
+                deptError.style.display = 'none';
+            }
+
+            return isValid;
+        }
+    </script>
+</body>
+</html>

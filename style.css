@@ -43,10 +43,7 @@ nav a{
     font-size: 16px;
     text-decoration: none;
 }
-article{
-    top:30px;
-    text-align: center;
-}
+
 /* .container {
     display: flex;
     flex-direction:column;
@@ -64,26 +61,31 @@ article{
     
 } */
 .sidebar{
-    /* margin: 15px; */
     padding: 30px;
     width: 180px;
     position: relative;
     height: 100%;
     background-color: burlywood;
     z-index: 3;
-    /* padding-right: 40px; */
 }
-.sidebar a{
-    z-index: 4;
+/* .sidebar a{
     text-align: left;
     text-decoration: none;
     color: black;
-    display: flex;
     padding: 10px;
     text-align: center;
     flex-direction: column;
 
 
+} */
+ main{
+    text-align: center;
+ }
+.container {
+    flex-direction: column;
+    /* display: flex;
+    top:30px;
+    text-align: center; */
 }
 nav a:hover{
     color: rgb(232, 232, 239);
@@ -92,6 +94,7 @@ nav a:hover{
     border-radius: 10px;
     box-shadow: 10px 1px  rgb(227, 134, 12);
 }
+
 
 p {
     color: rgb(1, 15, 15);

@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    height: 100vh;  
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    background-color: #f4f4f4; 
+    font-family: Arial, sans-serif;
+  }
+
+ 
+  #login {
+    display: inline-block; /* Shrink-wrap the content */
+    text-align: center;
+    padding: 20px;
+    width: fit-content;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Fieldset */
+  fieldset {
+    border: none;
+    text-align: center;
+    padding: 10px;
+  }
+
+  /* Legend (title) */
+  legend {
+    font-weight: bold;
+    font-size: 20px;
+    color: #333;
+    padding: 10px;
+  }
+
+ 
+  label {
+    display: block;
+    font-size: 16px;
+    margin: 0 0 10px;
+    color: #555;
+  }
+
+  input[type="text"],
+  input[type="password"],
+  input[type="tel"] {
+    width: 250px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+
+  input[type="submit"] {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ef233c;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #bf0603;
+  }
+
+  .forgot-password {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #007BFF;
+    text-decoration: none;
+  }
+
+  .forgot-password:hover {
+    text-decoration: underline;
+  }

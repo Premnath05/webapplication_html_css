@@ -48,9 +48,34 @@
             <br>
             <input type="text" placeholder="Enter the email"required>
            <br> <small>Example:john@gmail.com</small>
-            <br><label>Phone Number<i style="color: red;">*</i></label><br>
-            <input type="tel" pattern="[0-9]+" title="Ent
-            er valid phone number" placeholder="Enter the phone number"required>
+            <br><label for="yes">Phone Number<i style="color: red;">*</i></label><br>
+            <!-- <input type="tel" pattern="[0-9]+" title="Enter valid phone number" placeholder="Enter the phone number"required> -->
+            <input type="tel" id="yes" title="Enter valid phone number" placeholder="Enter the phone number"required>
+            <span id="bd" style="color: chocolate;font-size: small;"></span>
+
+
+            <script>
+                document.getElementById("yes").onchange=function(){
+                           var pattern=/^\+91\d{10}$/;
+                           const input=this.value;
+                           const message=document.getElementById("bd");
+           
+                           if(pattern.test(input)){
+                               message.style.color="green";
+                               message.innerText="valid number";
+                           }
+                           else{
+                               message.innerText="enter the valid number";
+                           }
+                }
+
+
+                // document.getElementById("")
+             </script>
+
+
+
+
             <br><label>Gender<i style="color: red;">*</i></label><br>
             <input type="radio" name="Gender" value="Male"required>Male </input>
             <input type="radio" name="Gender" value="Female"required>Female </input>

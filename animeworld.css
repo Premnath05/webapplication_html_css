@@ -6,39 +6,74 @@
 }
 nav {
     background-color: chocolate;
-    padding: 10px;
-    /*display: flex; flex-direction: row;*/
-    
-    font-weight: 500;
+    padding: 15px;
+    display: flex; 
+    /* align-items: center; */
+    justify-content: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    text-align: center;
+    
 }
-.sidebar {
-    width: 100px;
-    position: fixed;
-    left: 0;
-    top: 50px;
-    display: block;
 
-    display: flex ;flex-direction:column;
-}
 nav a{
+    text-align: center;
     color:white;
+    margin: 0 25px;
     font-size: 18px;
     text-decoration: none;
     padding: 10px;
 
 }
-nav  ul{
 
-    list-style-type: none;
-    display: flex;
-    gap: 100px;
-}
 nav a:hover {
     color: black;
     
 }
+
+/* .sidebar {
+    width: 100px;
+    position: fixed;
+    
+    left: 0;
+    top: 50px;
+    display: block;
+    
+    display: flex ;flex-direction:column;
+} */
+
+.sidebar {
+    width: 200px;
+    height: 100vh; /* Full height */
+    background-color: #333; /* Dark background */
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 12px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: chocolate;
+}
+
+/* To shift main content away from the sidebar */
+.main-content {
+    margin-left: 220px; /* Adjust based on sidebar width */
+    padding: 20px;
+}
+
 body{
     background-color: #EEE4E1;
 }
@@ -46,7 +81,7 @@ body{
 h1 {
     color:coral;
     text-align: center;
-
+    
 }
 .prem{
     
@@ -66,6 +101,11 @@ div p{
 p::first-letter{
     font-size: large;
     color: blue;
+}
+.grid{
+    text-align: center;
+    display: grid;
+    justify-content: center;
 }
 .center{
 

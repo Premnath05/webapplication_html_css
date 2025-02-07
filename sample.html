@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <p id="dom"> nodeJS</p>
+    <script>
+        document.getElementById("dom").innerHTML = "javascript";
+        var pred=document.getElementById("dom").textContent;
+        document.write(pred);
+
+        </script> -->
+        <p id="ab"> welcome to the animeworld</p>
+        <p >one piece</p>
+        <p>bleach</p>
+        <p>naruto</p>
+        <button id="bb">Click here</button>
+        <button id="greet" onclick="alert('Good morning')">greet</button>
+        <button id="wish" onclick="sayhello()">wish</button>
+
+        <button id="bbb">welcome</button>
+        
+        <button id="hello" onclick="alert('konichiwa')">hello</button>
+
+        <button id="hero">trip</button><br>
+        <label for="color">enter color</label>
+        <input type="text" id="color" placeholder="enter color">
+        <br><label for="name" >Enter name</label>
+        <input type="text" id="name" placeholder="enter the name"><br><br>
+<!-- <input type="text" placeholder="welcome">
+<input type="radio">merge</input><br><br> -->
+
+<label for="phone">enter phone number</label><br>
+<input type="tel" id="yes" placeholder="enter the phone number"><br>
+        <script>
+            document.getElementById("yes").onchange=function(){
+                var pattern=/^\+91\d{10}$/;
+                console.log("valid phonenumber");
+
+            }
+            document.getElementById("color").onchange=function(){
+                document.getElementById("color").style.backgroundColor=document.getElementById("color").value;
+            }
+
+
+
+            document.getElementById("name").style.backgroundColor="yellow";
+            document.getElementById("name").style.borderColor="red";
+            // document.getElementById("name").style="background-Color:yellow;border:3px solid blue;padding:20px;";
+
+
+
+            document.getElementById("name").onchange=function(){
+                alert("you should enter your name "+document.getElementById("name").value.toUpperCase());
+            }
+            function trip(){
+                alert("plan for the trip");
+            }
+            document.getElementById("hero").addEventListener("click",() =>{trip()});
+
+
+            function welcome(){
+                alert("anime has millions of emotions");
+
+            }
+            document.getElementById("bbb").addEventListener("click",function(){welcome()});
+
+
+            function sayhello(){
+                alert("have a great day");
+            }
+
+
+            function hello(){
+                alert("welcome to great grikalan magic show");
+            }
+            
+            document.getElementById("bb").addEventListener("click",function() {hello()});
+        </script>
+
+        <script>
+            // document.getElementById("ab").innerHTML="anime with lot of emotions";
+            var db=document.getElementById("ab").textContent;
+            // document.write(db);
+        </script>
+
+        <script>
+            document.getElementById("ab");
+            document.getElementById("ab").style.fontStyle="italic";
+            document.getElementById("ab").style.backgroundColor="orange";
+
+            // for(let i=0;i<5;i++){
+            //    var b= document.getElementById("ab");
+            //    document.write(b.textContent);
+            // }
+
+            let collect=document.getElementsByTagName("p");
+            document.write(collect.length);
+
+            var concat=collect[0].textContent+"***"+collect[1].textContent;
+            document.getElementById("ab").innerHTML="one punch man";
+            document.write(concat);
+
+            // for(e in )
+
+
+      
+      </script>
+        
+</body>
+</html>
