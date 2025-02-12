@@ -1,0 +1,12 @@
+{
+    "users":{
+    "name": "Prem",
+    "age": 21,
+    "isStudent": true,
+    "skills": ["Java", "Python", "JavaScript"],
+    "address": {
+      "city": "Salem",
+      "country": "India"
+    }
+  }
+}

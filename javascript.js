@@ -117,7 +117,23 @@ person1.welcome();
 
 
 class data{
-    constructor (name1,age1,work){
+    constructor (name1,balance)
+    {
+        this.name1=name1;
+        this.balance=balance;
+
+    }
+
+    deposite(amount){ 
+        return this.balance+=amount
+    }
+
+    bankbalance(){
+        if(500>=this.balance){
+            console.log(`Mr.${this.name} your withdraw balance limit is 500`);
+        }
 
     }
 }
+
+

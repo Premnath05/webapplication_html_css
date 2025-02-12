@@ -78,18 +78,16 @@ body{
     background-color: #EEE4E1;
 }
 
-h1 {
-    color:coral;
-    text-align: center;
+h1,h2 {
+    padding: 20px;
+    color:tomato;
+    text-align: left;
     
 }
 .prem{
     
     color: black;
 
-}
-div p{
-    color: red;
 }
 
 #madhav {
