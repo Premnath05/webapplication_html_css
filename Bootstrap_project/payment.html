@@ -1,0 +1,207 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .payment-container {
+            max-width: 500px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .btn-pay {
+            width: 100%;
+            background-color: black;
+            color: white;
+        }
+        .upi-form, .card-form {
+            display: none;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="payment-container">
+            <h4 class="text-center">Payment</h4>
+            <p><strong>Mobile Number:</strong> +91 9876543210</p>
+            <p><strong>Operator:</strong> Airtel Prepaid</p>
+            <p><strong>Amount:</strong> ₹<span id="planAmount">499</span></p>
+            
+            <h5>Payment Options</h5>
+            <div class="d-flex justify-content-between">
+                <button class="btn btn-outline-dark w-100 me-2 payment-option" data-target="#upiForm">UPI</button>
+                <button class="btn btn-outline-dark w-100 payment-option" data-target="#cardForm">Card</button>
+            </div>
+            
+            <div id="upiForm" class="upi-form">
+                <h5 class="mt-3">UPI Payment</h5>
+                <label for="upiId" class="form-label">UPI ID</label>
+                <input type="text" class="form-control" id="upiId" placeholder="example@upi">
+                <label for="upiPassword" class="form-label mt-2">UPI Password</label>
+                <input type="password" class="form-control" id="upiPassword" placeholder="Enter UPI password">
+                <button id="upiPayBtn" class="btn btn-pay mt-3">Pay ₹<span id="upiPayAmount">499</span></button>
+            </div>
+            
+            <div id="cardForm" class="card-form">
+                <h5 class="mt-3">Card Payment</h5>
+                <form>
+                    <label for="cardNumber" class="form-label">Card Number</label>
+                    <input type="text" class="form-control" id="cardNumber" placeholder="1234 5678 9012 3456">
+                    <label for="expiryDate" class="form-label mt-2">Expiry Date</label>
+                    <input type="text" class="form-control" id="expiryDate" placeholder="MM/YY">
+                    <label for="cvv" class="form-label mt-2">CVV</label>
+                    <input type="text" class="form-control" id="cvv" placeholder="123">
+                    <label for="cardName" class="form-label mt-2">Card Holder Name</label>
+                    <input type="text" class="form-control" id="cardName" placeholder="Name on Card">
+                    <button id="cardPayBtn" type="button" class="btn btn-pay mt-3">Pay ₹<span id="cardPayAmount">499</span></button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.querySelectorAll('.payment-option').forEach(button => {
+            button.addEventListener('click', function() {
+                document.querySelector('#upiForm').style.display = 'none';
+                document.querySelector('#cardForm').style.display = 'none';
+                document.querySelector(this.getAttribute('data-target')).style.display = 'block';
+            });
+        });
+        
+        document.querySelector('#upiPayBtn').addEventListener('click', function() {
+            alert('Payment Successful via UPI!');
+        });
+        
+        document.querySelector('#cardPayBtn').addEventListener('click', function() {
+            alert('Payment Successful via Card!');
+        });
+    </script>
+</body>
+</html> -->
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment - Tobi Network</title>
+  <link rel="stylesheet" href="payment.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="home.html">
+        <h1>Tobi Network</h1>
+      </a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="plans.html">Plans</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="payment-container">
+    <h2>Payment Page</h2>
+    <p>Amount to be paid: ₹<span id="amount"></span></p>
+    <form action="process-payment.html" method="POST">
+      <div class="form-check">
+        <input class="form-check-input" type="radio" id="upi" name="paymentMethod" value="UPI" checked>
+        <label class="form-check-label" for="upi">UPI</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" id="card" name="paymentMethod" value="Card">
+        <label class="form-check-label" for="card">Card</label>
+      </div>
+
+      <div id="upi-options" class="payment-options mt-3">
+        <div class="form-group">
+          <label for="upiApp">Choose UPI App:</label>
+          <select id="upiApp" name="upiApp" class="form-control" required>
+            <option value="GooglePay">Google Pay</option>
+            <option value="Paytm">Paytm</option>
+            <option value="PhonePe">PhonePe</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="upiId">UPI ID:</label>
+          <input type="text" id="upiId" name="upiId" class="form-control" required>
+        </div>
+      </div>
+
+      <div id="card-options" class="payment-options mt-3" style="display: none;">
+        <div class="form-group">
+          <label for="cardNumber">Card Number:</label>
+          <input type="text" id="cardNumber" name="cardNumber" class="form-control" placeholder="1234 5678 9012 3456">
+        </div>
+        <div class="form-group">
+          <label for="expiryDate">Expiry Date:</label>
+          <input type="text" id="expiryDate" name="expiryDate" class="form-control" placeholder="MM/YY">
+        </div>
+        <div class="form-group">
+          <label for="cvv">CVV:</label>
+          <input type="text" id="cvv" name="cvv" class="form-control" placeholder="123">
+        </div>
+        <div class="form-group">
+          <label for="cardHolderName">Card Holder Name:</label>
+          <input type="text" id="cardHolderName" name="cardHolderName" class="form-control" placeholder="Name on Card">
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-success btn-block mt-4">Pay ₹<span id="payAmount"></span></button>
+    </form>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Tobi Network | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    function getAmountFromUrl() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const amount = urlParams.get('amount');
+      document.getElementById('amount').textContent = amount;
+      document.getElementById('payAmount').textContent = amount;
+    }
+
+    function togglePaymentOptions() {
+      const upiOptions = document.getElementById('upi-options');
+      const cardOptions = document.getElementById('card-options');
+      const paymentMethod = document.querySelector('input[name="paymentMethod"]:checked').value;
+
+      if (paymentMethod === 'UPI') {
+        upiOptions.style.display = 'block';
+        cardOptions.style.display = 'none';
+      } else {
+        upiOptions.style.display = 'none';
+        cardOptions.style.display = 'block';
+      }
+    }
+
+    document.querySelectorAll('input[name="paymentMethod"]').forEach((elem) => {
+      elem.addEventListener('change', togglePaymentOptions);
+    });
+
+    window.onload = getAmountFromUrl;
+  </script>
+</body>
+</html>

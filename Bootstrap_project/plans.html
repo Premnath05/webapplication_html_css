@@ -1,0 +1,106 @@
+<!-- 
+  <script>
+    function showPlans(category) {
+      document.querySelectorAll('.plans-section').forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById(category).classList.add('active');
+    }
+  </script>
+ -->
+
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Plans - Tobi Network</title>
+  <link rel="stylesheet" href="plans.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <a href="home.html"> 
+        <h1>Tobi Network</h1>
+      </a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="plans.html">Plans</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="support.html">Support</a></li>
+        <li><a href="login.html" class="login-btn">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <aside class="sidebar">
+    <h3>Plans Category</h3>
+    <ul>
+      <li onclick="showPlans('popular')">Popular Plans</li>
+      <li onclick="showPlans('5g')">5G Plans</li>
+      <li onclick="showPlans('talktime')">Talk Time Plans</li>
+      <li onclick="showPlans('annual')">Annual Plans</li>
+      <li onclick="showPlans('international')">International Plans</li>
+    </ul>
+  </aside>
+
+  <div class="plans-container">
+    <h2>Available Plans</h2>
+    <div id="popular" class="plans-section active">
+      <div class="plan-card"><span>₹199</span><span>1.5GB/day</span><span>28 Days</span><button onclick="redirectToPayment(199)">Buy Now</button></div>
+      <div class="plan-card"><span>₹299</span><span>2GB/day</span><span>28 Days</span><button onclick="redirectToPayment(299)">Buy Now</button></div>
+      <div class="plan-card"><span>₹399</span><span>3GB/day</span><span>28 Days</span><button onclick="redirectToPayment(399)">Buy Now</button></div>
+      <div class="plan-card"><span>₹499</span><span>4GB/day</span><span>28 Days</span><button onclick="redirectToPayment(499)">Buy Now</button></div>
+      <div class="plan-card"><span>₹599</span><span>2.5GB/day</span><span>56 Days</span><button onclick="redirectToPayment(599)">Buy Now</button></div>
+      <div class="plan-card"><span>₹699</span><span>3GB/day</span><span>56 Days</span><button onclick="redirectToPayment(699)">Buy Now</button></div>
+    </div>
+
+    <div id="5g" class="plans-section">
+      <div class="plan-card"><span>₹599</span><span>3GB/day</span><span>56 Days</span><button onclick="redirectToPayment(599)">Buy Now</button></div>
+      <div class="plan-card"><span>₹699</span><span>4GB/day</span><span>56 Days</span><button onclick="redirectToPayment(699)">Buy Now</button></div>
+      <div class="plan-card"><span>₹799</span><span>Unlimited 5G</span><span>84 Days</span><button onclick="redirectToPayment(799)">Buy Now</button></div>
+      <div class="plan-card"><span>₹999</span><span>5GB/day</span><span>90 Days</span><button onclick="redirectToPayment(999)">Buy Now</button></div>
+      <div class="plan-card"><span>₹1499</span><span>6GB/day</span><span>120 Days</span><button onclick="redirectToPayment(1499)">Buy Now</button></div>
+    </div>
+
+    <div id="talktime" class="plans-section">
+      <div class="plan-card"><span>₹100</span><span>₹81.75 Talktime</span><span>NA</span><button onclick="redirectToPayment(100)">Buy Now</button></div>
+      <div class="plan-card"><span>₹200</span><span>₹165 Talktime</span><span>NA</span><button onclick="redirectToPayment(200)">Buy Now</button></div>
+      <div class="plan-card"><span>₹500</span><span>₹420 Talktime</span><span>NA</span><button onclick="redirectToPayment(500)">Buy Now</button></div>
+    </div>
+
+    <div id="annual" class="plans-section">
+      <div class="plan-card"><span>₹2399</span><span>1.5GB/day</span><span>365 Days</span><button onclick="redirectToPayment(2399)">Buy Now</button></div>
+      <div class="plan-card"><span>₹2999</span><span>2GB/day</span><span>365 Days</span><button onclick="redirectToPayment(2999)">Buy Now</button></div>
+      <div class="plan-card"><span>₹3999</span><span>3GB/day</span><span>365 Days</span><button onclick="redirectToPayment(3999)">Buy Now</button></div>
+      <div class="plan-card"><span>₹4999</span><span>Unlimited</span><span>365 Days</span><button onclick="redirectToPayment(4999)">Buy Now</button></div>
+    </div>
+
+    <div id="international" class="plans-section">
+      <div class="plan-card"><span>₹2999</span><span>International Roaming</span><span>30 Days</span><button onclick="redirectToPayment(2999)">Buy Now</button></div>
+      <div class="plan-card"><span>₹3999</span><span>International Roaming</span><span>60 Days</span><button onclick="redirectToPayment(3999)">Buy Now</button></div>
+      <div class="plan-card"><span>₹4999</span><span>International Roaming</span><span>90 Days</span><button onclick="redirectToPayment(4999)">Buy Now</button></div>
+    </div>
+  </div>
+
+  <script>
+    function showPlans(category) {
+      document.querySelectorAll('.plans-section').forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById(category).classList.add('active');
+    }
+
+    function redirectToPayment(amount) {
+      window.location.href = `payment.html?amount=${amount}`;
+    }
+  </script>
+
+  <footer>
+    <p>&copy; 2025 Tobi Network | All Rights Reserved</p>
+  </footer>
+</body>
+</html>

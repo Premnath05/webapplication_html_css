@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Successful - Mobile Recharge</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --yellow: #FFC107;
+            --dark: #212529;
+            --light: #f8f9fa;
+            --success: #28a745;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f0f0;
+        }
+        
+        .card {
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .section-header {
+            font-weight: 600;
+            border-bottom: 2px solid var(--yellow);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .success-checkmark {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto;
+            border-radius: 50%;
+            background-color: var(--success);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 40px;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.7);
+            }
+            70% {
+                transform: scale(1.05);
+                box-shadow: 0 0 0 15px rgba(40, 167, 69, 0);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(40, 167, 69, 0);
+            }
+        }
+        
+        .transaction-details {
+            background-color: var(--light);
+            border-radius: 10px;
+            padding: 15px;
+        }
+        
+        .btn-primary {
+            background-color: var(--yellow);
+            border-color: var(--yellow);
+            color: var(--dark);
+            font-weight: 600;
+            padding: 10px 25px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: #e0a800;
+            border-color: #e0a800;
+            color: var(--dark);
+            transform: scale(1.05);
+        }
+        
+        .btn-outline {
+            border: 2px solid var(--yellow);
+            color: var(--dark);
+            font-weight: 600;
+            padding: 10px 25px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            background-color: transparent;
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--yellow);
+            color: var(--dark);
+            transform: scale(1.05);
+        }
+        
+        .qr-code {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        
+        .timer-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .timer {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--dark);
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.8s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .shake {
+            animation: shake 0.5s;
+        }
+        
+        @keyframes shake {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            50% { transform: translateX(5px); }
+            75% { transform: translateX(-5px); }
+            100% { transform: translateX(0); }
+        }
+        
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: var(--yellow);
+            opacity: 0.8;
+            animation: confetti-fall 3s ease-in-out infinite;
+        }
+        
+        @keyframes confetti-fall {
+            0% { transform: translateY(-100px) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(500px) rotate(360deg); opacity: 0; }
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 992px) {
+            .order-mobile-1 {
+                order: 1;
+            }
+            .order-mobile-2 {
+                order: 2;
+            }
+        }
+    </style>
+</head>
+<body id="confirmation">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-12 mb-4 text-center">
+                <h1 class="fw-bold">Payment Successful!</h1>
+                <p class="text-muted">Your mobile recharge has been processed successfully</p>
+            </div>
+        </div>
+        
+        <div class="row justify-content-center">
+            <!-- Main Success Card -->
+            <div class="col-lg-8 mb-4 fade-in">
+                <div class="card p-4">
+                    <div class="text-center mb-4">
+                        <div class="success-checkmark">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <h3 class="mt-4">Transaction Completed</h3>
+                        <p class="text-success mb-0">Your payment of ₹839 was successful</p>
+                        <p class="text-muted">Transaction ID: TXN123456789</p>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h4 class="section-header">Plan Activated</h4>
+                            <div class="transaction-details mb-4">
+                                <h5 class="fw-bold">Unlimited Plus</h5>
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>Phone Number:</span>
+                                    <span class="fw-bold">9XX XXX XX10</span>
+                                </div>
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>Validity:</span>
+                                    <span class="fw-bold">84 Days</span>
+                                </div>
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>Data:</span>
+                                    <span class="fw-bold">2GB/day</span>
+                                </div>
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>Activation:</span>
+                                    <span class="fw-bold">Immediate</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <h4 class="section-header">Payment Details</h4>
+                            <div class="transaction-details">
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>Payment Method:</span>
+                                    <span class="fw-bold">UPI</span>
+                                </div>
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>Transaction Date:</span>
+                                    <span class="fw-bold">21 Feb, 2025</span>
+                                </div>
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>Transaction Time:</span>
+                                    <span class="fw-bold">11:45 AM</span>
+                                </div>
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>Amount:</span>
+                                    <span class="fw-bold">₹839.00</span>
+                                </div>
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>GST:</span>
+                                    <span class="fw-bold">Included</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4 text-center">
+                        <h5>A confirmation SMS and email has been sent to your registered contact details</h5>
+                        <div class="d-flex flex-wrap justify-content-center gap-3 mt-4">
+                            <button class="btn btn-primary" id="downloadReceiptBtn">
+                                <i class="fas fa-download me-2"></i> Download Receipt
+                            </button>
+                            <button class="btn btn-outline" id="shareReceiptBtn">
+                                <i class="fas fa-share-alt me-2"></i> Share Receipt
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- What's Next Card -->
+            <div class="col-lg-8 mb-4 fade-in" style="animation-delay: 0.3s;">
+                <div class="card p-4">
+                    <h4 class="section-header">What's Next?</h4>
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="text-center">
+                                <div class="rounded-circle bg-light p-3 d-inline-block mb-3">
+                                    <i class="fas fa-mobile-alt fa-2x text-primary"></i>
+                                </div>
+                                <h5>Check Balance</h5>
+                                <p class="small">Dial *121# to check your updated balance and plan details</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="text-center">
+                                <div class="rounded-circle bg-light p-3 d-inline-block mb-3">
+                                    <i class="fas fa-headset fa-2x text-primary"></i>
+                                </div>
+                                <h5>24/7 Support</h5>
+                                <p class="small">Need help? Our customer support is always available</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="text-center">
+                                <div class="rounded-circle bg-light p-3 d-inline-block mb-3">
+                                    <i class="fas fa-gift fa-2x text-primary"></i>
+                                </div>
+                                <h5>Exclusive Offers</h5>
+                                <p class="small">Check our app for more exclusive deals and offers</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center mt-4">
+                        <button class="btn btn-primary" id="backToHomeBtn">
+                            <i class="fas fa-home me-2"></i> Back to Home
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Create confetti effect
+            createConfetti();
+            
+            // Download receipt button click handler
+            document.getElementById('downloadReceiptBtn').addEventListener('click', function() {
+                this.classList.add('shake');
+                setTimeout(() => {
+                    this.classList.remove('shake');
+                    alert('Receipt downloaded successfully!');
+                }, 500);
+            });
+            
+            // Share receipt button click handler
+            document.getElementById('shareReceiptBtn').addEventListener('click', function() {
+                this.classList.add('shake');
+                setTimeout(() => {
+                    this.classList.remove('shake');
+                    
+                    if (navigator.share) {
+                        navigator.share({
+                            title: 'Mobile Recharge Receipt',
+                            text: 'My mobile recharge of ₹839 was successful! Transaction ID: TXN123456789',
+                            url: window.location.href,
+                        })
+                        .catch((error) => console.log('Error sharing', error));
+                    } else {
+                        alert('Sharing options opened!');
+                    }
+                }, 500);
+            });
+            
+            // Back to home button click handler
+            document.getElementById('backToHomeBtn').addEventListener('click', function() {
+                window.location.href = "#home";
+            });
+            
+            // Function to create confetti effect
+            function createConfetti() {
+                const container = document.body;
+                const confettiCount = 50;
+                const colors = ['#FFC107', '#28a745', '#17a2b8', '#dc3545', '#6f42c1'];
+                
+                for (let i = 0; i < confettiCount; i++) {
+                    const confetti = document.createElement('div');
+                    confetti.className = 'confetti';
+                    confetti.style.left = Math.random() * 100 + 'vw';
+                    confetti.style.animationDelay = Math.random() * 3 + 's';
+                    confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                    container.appendChild(confetti);
+                    
+                    // Remove confetti after animation
+                    setTimeout(() => {
+                        confetti.remove();
+                    }, 3000);
+                }
+            }
+            
+            // Simulate the original page's payment flow
+            // Modify the original pay button to redirect to this confirmation page
+            if (window.location.href.indexOf('#confirmation') === -1) {
+                const payButton = document.getElementById('payButton');
+                if (payButton) {
+                    payButton.addEventListener('click', function() {
+                        const selectedMethod = document.querySelector('.payment-method-card.active');
+                        if (!selectedMethod) return;
+                        
+                        // Validate based on payment method (simplified from original)
+                        alert('Processing payment... You will be redirected to the confirmation page.');
+                        setTimeout(() => {
+                            window.location.href = "#confirmation";
+                            location.reload(); // Force reload to show confirmation page
+                        }, 1500);
+                    });
+                }
+            }
+        });
+    </script>
+</body>
+</html>

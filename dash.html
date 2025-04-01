@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeleoApp Dashboard</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+        .navbar {
+            background-color: #000;
+            color: #fff;
+        }
+        .navbar-brand {
+            color: #fff;
+        }
+        .navbar-icons {
+            color: #fff;
+        }
+        .profile-section, .current-plan, .saved-plans, .recent-transactions {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .btn-yellow {
+            background-color: #ffc107;
+            color: #000;
+            border: none;
+        }
+        .sidebar {
+            background-color: #000;
+            color: #fff;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 250px;
+            padding-top: 60px;
+        }
+        .sidebar a {
+            color: #fff;
+            padding: 10px;
+            display: block;
+            text-decoration: none;
+        }
+        .sidebar a:hover {
+            background-color: #333;
+        }
+        .main-content {
+            margin-left: 250px;
+            padding: 20px;
+        }
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+            .main-content {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">TeleoApp</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fas fa-bell"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fas fa-user"></i></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="sidebar">
+        <a href="#">Dashboard</a>
+        <a href="#">Saved Plans</a>
+        <a href="#">Recharge History</a>
+        <a href="#">Payment Methods</a>
+        <a href="#">Support</a>
+    </div>
+
+    <div class="main-content">
+        <div class="profile-section">
+            <h2>John Doe</h2>
+            <p>+1 234 567 8900</p>
+            <p>Active Plan - Valid till Mar 15, 2025</p>
+        </div>
+
+        <div class="current-plan">
+            <h3>Unlimited Plus</h3>
+            <p>$599 / 84 days</p>
+            <ul>
+                <li>20B/day High Speed Data</li>
+                <li>Unlimited Calls</li>
+                <li>Free Netflix Basic</li>
+            </ul>
+            <button class="btn btn-yellow">Renew Plan</button>
+            <button class="btn btn-yellow">Change Plan</button>
+        </div>
+
+        <div class="saved-plans">
+            <h3>Saved Plans</h3>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Basic</h5>
+                            <p class="card-text">$299 / 28 days</p>
+                            <button class="btn btn-yellow">Set as Preferred</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Standard</h5>
+                            <p class="card-text">$499 / 56 days</p>
+                            <button class="btn btn-yellow">Set as Preferred</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Premium</h5>
+                            <p class="card-text">$799 / 84 days</p>
+                            <button class="btn btn-yellow">Set as Preferred</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="recent-transactions">
+            <h3>Recent Transactions</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Plan</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Mar 15, 2025</td>
+                        <td>Unlimited Plus</td>
+                        <td>$599</td>
+                        <td>Success</td>
+                    </tr>
+                    <tr>
+                        <td>Feb 15, 2025</td>
+                        <td>Standard</td>
+                        <td>$499</td>
+                        <td>Success</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

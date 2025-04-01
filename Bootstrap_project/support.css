@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+    line-height: 1.6;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #800000;
+    padding: 15px 30px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  header .logo h1 {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .logo a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  header nav ul {
+    display: flex;
+    list-style: none;
+  }
+  
+  header nav ul li {
+    margin-left: 25px;
+  }
+  
+  header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  header nav ul li a:hover {
+    color: #ffd700;
+  }
+  
+  .login-btn {
+    background-color: #009688;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login-btn:hover {
+    background-color: #00796b;
+  }
+  
+.support-hero {
+    background: url('/images/support-bg.jpg') no-repeat center center/cover;
+    text-align: center;
+    padding: 120px 20px;
+    color: black;
+    background-color: #FFF8DC;
+}
+
+.support-hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-bar input {
+    width: 50%;
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+}
+
+.search-bar button {
+    padding: 12px;
+    border: none;
+    background: #00ccff;
+    color: white;
+    cursor: pointer;
+}
+
+/* Troubleshooting Section */
+.troubleshooting {
+    text-align: center;
+    padding: 60px 20px;
+    background: #f9f9f9;
+}
+
+.troubleshooting h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.troubleshooting p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.trouble-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.trouble-item {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.trouble-item:hover {
+    background: #00ccff;
+    color: #fff;
+}
+
+.explore-more {
+    margin-top: 20px;
+}
+
+.explore-more a {
+    text-decoration: none;
+    color: #00ccff;
+    font-size: 18px;
+}
+
+.explore-more a:hover {
+    text-decoration: underline;
+}
+
+.contact-support {
+    text-align: center;
+    padding: 60px 20px;
+    background: #1e1e1e;
+    color: #fff;
+}
+
+.contact-support h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.contact-support p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.contact-support form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-support input,
+.contact-support textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    background: #2a2a2a;
+    color: #fff;
+}
+
+.contact-support textarea {
+    height: 120px;
+}
+
+.contact-support button {
+    padding: 12px 20px;
+    background-color: #00ccff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.contact-support button:hover {
+    background-color: #0088cc;
+}
+
+footer {
+    background: #111;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+}

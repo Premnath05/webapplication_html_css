@@ -1,0 +1,29 @@
+{
+    "users": [
+      {
+        "mobileNumber": "9876543210",
+        "name": "John Doe",
+        "email": "john@example.com"
+      },
+      {
+        "mobileNumber": "9876543211",
+        "name": "Jane Smith",
+        "email": "jane@example.com"
+      },
+      {
+        "mobileNumber": "9876543212",
+        "name": "Mike Johnson",
+        "email": "mike@example.com"
+      },
+      {
+        "mobileNumber": "8765432101",
+        "name": "Sarah Williams",
+        "email": "sarah@example.com"
+      },
+      {
+        "mobileNumber": "7654321098",
+        "name": "Alex Brown",
+        "email": "alex@example.com"
+      }
+    ]
+  }
